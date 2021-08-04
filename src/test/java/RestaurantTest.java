@@ -72,9 +72,10 @@ class RestaurantTest {
 
     @Test
     public void calculateOrderValue_should_return_sum_of_price_of_items_selected(){
-        restaurant.addToOrder(restaurant.getMenu().get(0));
-        Integer orderValue = restaurant.calculateOrderValue(restaurant.getSelectedList());
-        assertEquals(119,orderValue);
+        List<String> itemsSelected = new ArrayList<String>();
+        itemsSelected.add("Vegetable lasagne");
+        Integer orderValue = restaurant.calculateOrderValue(itemsSelected);
+        assertEquals(269,orderValue);
     }
     //<<<<<<<<<<<<<<<<<<<<<<<ORDER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
